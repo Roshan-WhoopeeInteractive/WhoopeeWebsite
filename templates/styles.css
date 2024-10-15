@@ -18,6 +18,13 @@ body {
     text-align: center;
 }
 
+.footer {
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+    position: relative; /* Change to 'relative' if you want it to flow with content */
+    width: 100%; /* Ensure it spans the full width */    
+}
+
 /* Style for the heading */
 h1 {
     font-family: 'MyBukhari', Helvetica, sans-serif;
