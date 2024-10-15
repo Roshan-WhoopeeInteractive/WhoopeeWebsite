@@ -10,11 +10,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: start;  
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
     text-align: center;
 }
 
@@ -22,7 +22,9 @@ body {
     text-align: center;
     padding: 20px; /* Adjust padding as needed */
     position: relative; /* Change to 'relative' if you want it to flow with content */
-    width: 100%; /* Ensure it spans the full width */    
+    width: 100%; /* Ensure it spans the full width */
+    background-color: #f8f8f8; /* Optional: match background for visual consistency */
+   
 }
 
 /* Style for the heading */
