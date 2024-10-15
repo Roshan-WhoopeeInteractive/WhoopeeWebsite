@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: "MyBukhari";
+    src: url('fonts/Bukhari_Script.ttf') format('truetype');
+    font-display: swap; /* Helps in displaying text while loading the font */
+}
+
+/* Center the content on the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: start;  
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+    position: relative; /* Change to 'relative' if you want it to flow with content */
+    width: 100%; /* Ensure it spans the full width */
+    background-color: #f8f8f8; /* Optional: match background for visual consistency */
+   
+}
+
+/* Style for the heading */
+h1 {
+    font-family: 'MyBukhari', Helvetica, sans-serif;
+    font-size: 48px;
+    color: #333;
+}
+
+/* Style for the paragraph text */
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Style for the button */
+.button {
+    display: inline-block; /* Allows padding and margin */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    text-decoration: none; /* Removes the underline from the link */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+    /* Hover effect for the button */
+    .button:hover {
+        background-color: #555;
+    }
