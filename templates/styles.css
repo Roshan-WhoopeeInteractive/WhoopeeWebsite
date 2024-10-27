@@ -5,6 +5,12 @@
     font-display: swap; /* Helps in displaying text while loading the font */
 }
 
+@font-face {
+    font-family: "Kavivanar-Regular";
+    src: url('fonts/Kavivanar-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
 /* Navigation links */
 nav {
     display: flex; /* Use flex to layout the links */
@@ -13,6 +19,7 @@ nav {
     width: 100%; /* Make sure it takes full width */
     padding-right: 20px; /* Add padding on the right */
     box-sizing: border-box; /* Include padding in total width */
+    font-family:'Franklin Gothic Book';
 }
 
 .nav-link {
@@ -72,7 +79,7 @@ h1 {
 
 /* Style for the heading */
 h2 {
-    font-family: 'MyBukhari', Helvetica, sans-serif;
+    font-family:'Franklin Gothic Book';
     font-size: 36px;
     color: white;
     margin: 20px;
@@ -102,20 +109,24 @@ section {
 
 /* About section */
 #about {
-    position:relative;
+    position: relative;
     height: 100vh; /* Ensure it covers the full height of the viewport */
     display: flex; /* Use flex to center content */
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     background-color: ghostwhite; /* Your background color */
-    overflow:hidden;
-    z-index:1;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0px 20px 0px 20px;
+    font-size: 18px;
+    font-family:'Franklin Gothic Book';
 }
 #animated-text {
     display: inline-block;
     border-right: 2px solid white; /* Blinking cursor effect */
     animation: blink 0.7s step-end infinite; /* Blinking effect */
+    font-family: "MyBukhari","Kavivanar-Regular";
 }
 
 
@@ -130,6 +141,8 @@ section {
     padding: 10px 0px 10px; /* Your preferred padding */
     background-color: #333333;
     font-size: 18px;
+    font-family:'Franklin Gothic Book';
+    letter-spacing:1px;
     color: #CDCDCD;
     margin: 0;
 }
@@ -142,6 +155,7 @@ section {
     background-color: #333333; /* Optional: match background for visual consistency */
     margin: 0px;
     font-size: 16px;
+    font-family:'Franklin Gothic Book';
     color: rgba(205, 205, 205, 0.5);
 }
 
@@ -151,6 +165,8 @@ section {
     display: inline-block; /* Allows padding and margin */
     padding: 10px 20px;
     font-size: 16px;
+    font-family:'Franklin Gothic Book', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing:1px;
     background-color: #333;
     color: white;
     text-decoration: none; /* Removes the underline from the link */
