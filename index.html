@@ -7,14 +7,98 @@
     <link rel="stylesheet" href="templates/styles.css">
 </head>
 <body>
-    <div style="text-align: center; margin-top: 100px;">
-        <h1>Whoopee Interactive</h1>
-        <p>"Website is under maintenance. Click the button below to view my work on ArtStation."</p>
-        <a href="https://roshanshaffeq.artstation.com/projects" target="_blank" class="button">Projects</a>        
-    </div>
+    <header>
 
+        <div>
+            <h3>WHOOPEE</h3>
+        </div>
+
+        <nav>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!--About section-->
+        <section id="about">
+            <video class="bg-video" autoplay muted loop>
+                <source src="templates/videos/Trailer.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <h1 id="animated-text"></h1> <!-- Added id for targeting -->
+            <p> We are a small startup studio making fun interactive things :) </p>
+            <input type="button" class="button" value="Projects" onclick="window.open('https://roshanshaffeq.artstation.com/', '_blank');">
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>roshan@whoopeeinteractive.com</p>
+            <p>+64-211550293</p>
+            <p>Wellington, NZ - 6022 </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>Contact: roshan@whoopeeinteractive.com</p>
+        <p>© 2022 Whoopee Interactive Ltd</p>
     </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+    // Smooth scroll for all links with "nav-link" class
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });</script>
+
+    <script>
+        const texts = ["Hello", "Kia ora", "வணக்கம்"]; // Texts to display
+        let currentTextIndex = 0; // Start with the first text
+        let currentCharIndex = 0; // Track the current character index
+        let isDeleting = false; // Flag to check if we are deleting
+
+        const typedTextElement = document.getElementById('animated-text');
+
+        function type() {
+            const currentText = texts[currentTextIndex];
+
+            // Type the text
+            if (isDeleting) {
+                // Remove a character
+                typedTextElement.textContent = currentText.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+            } else {
+                // Add a character
+                typedTextElement.textContent = currentText.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+            }
+
+            // Determine typing speed
+            let typingSpeed = isDeleting ? 100 : 50; // Faster when typing, slower when deleting
+
+            // Check if we reached the end of the text
+            if (!isDeleting && currentCharIndex === currentText.length) {
+                typingSpeed = 2000; // Pause before starting to delete
+                isDeleting = true; // Switch to deleting mode
+            } else if (isDeleting && currentCharIndex === 1) {
+                isDeleting = false; // Switch to typing mode
+                currentTextIndex = (currentTextIndex + 1) % texts.length; // Move to the next text
+            }
+
+            setTimeout(type, typingSpeed); // Call type function again after the determined speed
+        }
+
+        // Start the typing animation
+        type();
+    </script>
 </body>
 </html>

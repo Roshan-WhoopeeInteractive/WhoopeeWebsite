@@ -5,9 +5,48 @@
     font-display: swap; /* Helps in displaying text while loading the font */
 }
 
+/* Navigation links */
+nav {
+    display: flex; /* Use flex to layout the links */
+    gap: 0px; /* Space between the links */
+    justify-content: flex-end; /* Center links */
+    width: 100%; /* Make sure it takes full width */
+    padding-right: 20px; /* Add padding on the right */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+.nav-link {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Add padding for a better touch target */
+    margin: 0; /* Ensure no margin is affecting layout */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Add underline on hover for visibility */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 0px 0px 0px 20px;
+    margin: 0;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow: hidden; /* Prevents overflow issues */
+}
+
 /* Center the content on the page */
 body {
     font-family: Arial, sans-serif;
+    font-size:28px;
     background-color: #f8f8f8;
     margin: 0;
     padding: 0px;
@@ -17,29 +56,95 @@ body {
     min-height: 100vh; /* Ensure the body takes the full height of the viewport */
     text-align: center;
 }
-
-.footer {
+main {
     text-align: center;
-    padding: 20px; /* Adjust padding as needed */
-    position: relative; /* Change to 'relative' if you want it to flow with content */
-    width: 100%; /* Ensure it spans the full width */
-    background-color: #f8f8f8; /* Optional: match background for visual consistency */
-   
+    font-size: 28px;
+    margin: 0;
 }
+
 
 /* Style for the heading */
 h1 {
     font-family: 'MyBukhari', Helvetica, sans-serif;
-    font-size: 48px;
-    color: #333;
+    font-size: 48px;  
+    margin:0px;
+}
+
+/* Style for the heading */
+h2 {
+    font-family: 'MyBukhari', Helvetica, sans-serif;
+    font-size: 36px;
+    color: white;
+    margin: 20px;
+    letter-spacing: 2px; /* Adjust the value for desired spacing */
+}
+
+h3 {
+    font-family: 'MyBukhari', Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 0px;
+    flex-shrink: 1;
+    white-space: nowrap; /* Prevent text from wrapping */
+    letter-spacing: 1px; /* Adjust the value for desired spacing */
 }
 
 /* Style for the paragraph text */
 p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
+    margin: 10px;
 }
+
+/* Additional styles to ensure sections have no margin or padding */
+section {
+    margin: 0; /* Ensure there's no margin on sections */
+    padding: 0px 0; /* You can keep your preferred padding */
+}
+
+/* About section */
+#about {
+    position:relative;
+    height: 100vh; /* Ensure it covers the full height of the viewport */
+    display: flex; /* Use flex to center content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: ghostwhite; /* Your background color */
+    overflow:hidden;
+    z-index:1;
+}
+#animated-text {
+    display: inline-block;
+    border-right: 2px solid white; /* Blinking cursor effect */
+    animation: blink 0.7s step-end infinite; /* Blinking effect */
+}
+
+
+.bg-video {
+    position:absolute;
+    opacity: 0.1; 
+    z-index: -1;  
+}
+
+
+#contact {
+    padding: 10px 0px 10px; /* Your preferred padding */
+    background-color: #333333;
+    font-size: 18px;
+    color: #CDCDCD;
+    margin: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 0px 0px 10px; /* Adjust padding as needed */
+    position: relative; /* Change to 'relative' if you want it to flow with content */
+    width: 100%; /* Ensure it spans the full width */
+    background-color: #333333; /* Optional: match background for visual consistency */
+    margin: 0px;
+    font-size: 16px;
+    color: rgba(205, 205, 205, 0.5);
+}
+
 
 /* Style for the button */
 .button {
@@ -51,9 +156,11 @@ p {
     text-decoration: none; /* Removes the underline from the link */
     border-radius: 5px;
     transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 50px;
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-    /* Hover effect for the button */
-    .button:hover {
-        background-color: #555;
-    }
+/* Hover effect for the button */
+.button:hover {
+    background-color: #555;
+}
